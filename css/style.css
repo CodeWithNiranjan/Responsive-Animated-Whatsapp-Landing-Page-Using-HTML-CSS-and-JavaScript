@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.navbar{
+    background: transparent;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar a h1{
+    font-size: 30px;
+    color: #17bc44;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    list-style-type: none;
+    padding: 4px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .1s linear;
+}
+
+.navbar ul li a{
+    color: #333;
+    font-weight: 500;
+    transition: .1s linear;
+    font-size: 15px;
+}
+
+.navbar ul li:hover{
+    background: #17bc44;
+}
+
+.navbar ul li:hover a{
+    color: #fff;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+}
+.content .textBox{
+    position: relative;
+    max-width: 800px;
+}
+
+.content .textBox h1{
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox p{
+    color: #333;
+}
+
+.content .downloads{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.content .downloads a{
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+    width: 300px;
+    padding: 10px 30px;
+    margin: 10px 0px;
+    border-radius: 50px;
+    transition: .2s linear;
+}
+
+.content .downloads a:hover{
+    background: #17bc44;
+}
+
+.content .downloads a i{
+    width: 30px;
+}
+
+.content .imgBox img{
+    height: 600px;
+}
+
+.blob{
+    height: 800px;
+    width: 800px;
+    background: #17bc44;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -50%;
+    z-index: -1;
+    right: -20%;
+}
+
+.menuIcon{
+    height: 50px;
+    display: none;
+}
+
+@media (max-width: 645px) {
+    .navbar{
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        background: #17bc44;
+        backdrop-filter: blur(20px);
+        width: 90%;
+        padding: 20px;
+        border-radius: 20px;
+        display: none;
+    }
+
+    .navbar ul li{
+        text-align: center;
+        padding: 10px;
+        background: #17bc44;
+        flex-direction: column;
+        margin: 5px 0px;
+    }
+
+    .navbar ul li a{
+        color: #fff;
+    }
+
+    .navbar ul li:hover{
+        background: #fff;
+    }
+
+    .navbar ul li:hover a{
+        color: #000;
+    }
+
+    .topBar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menuIcon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .content .imgBox img{
+        height: 500px;
+    }
+    
+    .blob{
+        height: 500px;
+        width: 500px;
+        border-radius: 50%;
+        bottom: -70%;
+        right: -10%;
+    }
+}
